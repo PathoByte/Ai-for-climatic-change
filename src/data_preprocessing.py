@@ -20,3 +20,8 @@ def clean_data(df):
     return df_long
 
 
+def load_and_clean_data(filepath):
+    import pandas as pd
+    df = pd.read_csv(filepath)
+    df.dropna(inplace=True)
+    return df
